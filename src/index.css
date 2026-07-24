@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* FaxLab AI Design System v2 - Violet & Warm Accents */
+    --background: 0 0% 100%;
+    --foreground: 247 35% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 247 35% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 247 35% 13%;
+
+    /* Primary: Brand Violet #4B2FB3 */
+    --primary: 253 58% 44%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 253 58% 38%;
+
+    /* Secondary: Soft Lavender Mist (used for washes / alt backgrounds) */
+    --secondary: 252 63% 96%;
+    --secondary-foreground: 253 58% 34%;
+
+    /* Accent: Bright Violet Pop #6C4CF0 - buttons, highlights, stats */
+    --accent: 252 85% 62%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 252 91% 70%;
+
+    --muted: 251 55% 96%;
+    --muted-foreground: 250 12% 42%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 251 45% 91%;
+    --input: 251 45% 91%;
+    --ring: 252 85% 62%;
+
+    --radius: 1.25rem;
+
+    /* Extra brand hues - used explicitly for signature moments (hero, features, cta) */
+    --coral: 8 74% 55%;
+    --coral-foreground: 0 0% 100%;
+    --coral-light: 8 89% 94%;
+
+    --gold: 47 86% 59%;
+    --gold-foreground: 252 35% 15%;
+    --gold-light: 44 84% 91%;
+
+    --sky: 200 77% 61%;
+    --sky-foreground: 0 0% 100%;
+    --sky-light: 202 84% 93%;
+
+    --violet-deep: 253 63% 22%;
+    --violet-deep-foreground: 0 0% 100%;
+
+    /* Custom Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(253, 58%, 44%), hsl(252, 85%, 62%));
+    --gradient-hero: linear-gradient(180deg, hsl(252, 63%, 97%), hsl(0, 0%, 100%));
+    --gradient-warm: linear-gradient(135deg, hsl(8, 74%, 55%), hsl(31, 90%, 60%));
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%), hsl(252, 63%, 98%));
+    --gradient-footer: linear-gradient(180deg, hsl(253, 55%, 26%), hsl(253, 63%, 15%));
+
+    /* Shadows - tinted with brand violet for a soft, elevated feel */
+    --shadow-glow: 0 0 40px hsl(252 85% 62% / 0.35);
+    --shadow-card: 0 10px 30px -10px hsl(253 58% 44% / 0.12);
+    --shadow-elevated: 0 20px 50px -12px hsl(253 58% 44% / 0.25);
+    --shadow-soft: 0 8px 24px -8px hsl(253 58% 44% / 0.18);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 253 40% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 253 40% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 253 40% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 252 85% 66%;
+    --primary-foreground: 253 45% 12%;
+    --primary-hover: 252 85% 72%;
+
+    --secondary: 253 30% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 252 85% 66%;
+    --accent-foreground: 253 45% 12%;
+    --accent-glow: 252 91% 74%;
+
+    --muted: 253 25% 18%;
+    --muted-foreground: 250 15% 68%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 253 25% 20%;
+    --input: 253 25% 20%;
+    --ring: 252 85% 66%;
+
+    --gradient-hero: linear-gradient(180deg, hsl(253, 40%, 8%), hsl(253, 40%, 11%));
+    --gradient-card: linear-gradient(145deg, hsl(253, 40%, 12%), hsl(253, 30%, 15%));
+  }
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-warm {
+    background: var(--gradient-warm);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .smooth-transition {
+    transition: var(--transition-smooth);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  /* Section wash used for alternating light-lavender bands */
+  .bg-mist {
+    background: var(--gradient-hero);
+  }
+
+  .bg-footer-deep {
+    background: var(--gradient-footer);
+  }
+
+  /* Squiggle underline accent used beside section headings */
+  .squiggle-accent {
+    color: hsl(var(--accent));
+  }
+
+  /* Blob / organic shape morph for hero + decorative backgrounds */
+  @keyframes blob-morph {
+    0%, 100% { border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%; }
+    50% { border-radius: 60% 40% 35% 65% / 55% 60% 40% 45%; }
+  }
+  .animate-blob {
+    animation: blob-morph 10s ease-in-out infinite;
+  }
+
+  @keyframes marquee-x {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee-x 28s linear infinite;
+  }
+
+  /* 3D Flip Card Utilities */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
