@@ -133,7 +133,7 @@ const Auth = () => {
                     id="email"
                     name="email"
                     type="email"
-                    placeholder="john@example.com"
+                    placeholder="you@example.com"
                     value={formData.email}
                     onChange={handleInputChange}
                     className="pl-10"
