@@ -113,7 +113,7 @@ const Auth = () => {
                         <Input
                           id="fullName"
                           name="fullName"
-                          placeholder="you"
+                          placeholder="your name"
                           value={formData.fullName}
                           onChange={handleInputChange}
                           className="pl-10"
