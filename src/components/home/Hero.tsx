@@ -145,17 +145,21 @@ const Hero = () => {
             <div className="absolute top-10 left-10 w-72 h-72 bg-primary/15 rounded-[40%_60%_65%_35%/45%_40%_60%_55%] animate-blob blur-3xl z-0" />
             <div className="absolute bottom-20 right-4 w-80 h-80 bg-sky/20 rounded-[60%_40%_35%_65%/55%_60%_40%_45%] animate-blob blur-3xl z-0" />
 
-            {/* Positioned illustrative assets - Enlarged and Overlapping */}
-            <img
+            {/* Positioned illustrative assets - Animated and Shifted Left */}
+            <motion.img
               src={aiCanvasImage}
               alt="Blended AI head illustration"
-              className="absolute -top-4 -left-8 w-[85%] max-w-[650px] object-contain drop-shadow-xl z-10"
+              className="absolute -top-4 -left-20 w-[85%] max-w-[650px] object-contain drop-shadow-xl z-10"
+              animate={{ y: [0, -15, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             />
             
-            <img
+            <motion.img
               src={educationCanvasImage}
               alt="Blended education book stack illustration"
               className="absolute -bottom-8 -right-8 w-[90%] max-w-[700px] object-contain drop-shadow-2xl z-20"
+              animate={{ y: [0, 15, 0] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
             />
 
             {/* Added blended web design elements */}
