@@ -27,7 +27,7 @@ const FeaturedProgram = () => {
             </h2>
             <p className="mt-1 text-white/70 text-lg font-medium">{featuredProgram.subtitle}</p>
             <p className="mt-4 text-white/85 max-w-lg mx-auto md:mx-0">
-              Taught by {featuredProgram.instructor} — the psychology and frameworks
+              Taught by {featuredProgram.instructor}, the psychology and frameworks
               behind winning negotiations, built for real business scenarios.
             </p>
 
