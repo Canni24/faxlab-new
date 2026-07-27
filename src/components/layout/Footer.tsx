@@ -12,13 +12,13 @@ const Footer = () => {
     { name: "Courses", path: "/courses" },
     { name: "About", path: "/about" },
     { name: "Careers", path: "/careers" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const courseCategories = [
     { name: "Basics", path: "/courses?category=Basics" },
     { name: "Advanced", path: "/courses?category=Advanced" },
     { name: "Ethics", path: "/courses?category=Ethics" },
-    { name: "Career", path: "/courses?category=Career" },
   ];
 
   const socialLinks = [
