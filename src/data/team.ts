@@ -23,7 +23,7 @@ export const founder = {
   image: founderImage,
   linkedinUrl: "https://www.linkedin.com/in/rishabhagarwaliimc",
   bioLinksUrl: "https://linktr.ee/rishabh.iimc",
-  bio: "Engineer and IIM Calcutta alumnus with 20 years in supply chain and strategy. Author of four books, speaker, and guest faculty. Founded FaxLab AI to make practical, honest AI education and consulting accessible — and leads its curriculum, consulting engagements, and the Win-Win Code masterclass.",
+  bio: "Engineer and IIM Calcutta alumnus with 20 years in supply chain and strategy. Author of four books, speaker, and guest faculty. Founded FaxLab AI to make practical, honest AI education and consulting accessible and leads its curriculum, consulting engagements, and the Win-Win Code masterclass.",
   credentials: [
     { label: "IIM Calcutta Alumnus", accent: "primary" as const },
     { label: "4x Author", accent: "coral" as const },
