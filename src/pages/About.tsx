@@ -183,26 +183,26 @@ const About = () => {
                 FaxLab AI was born out of a simple observation: artificial intelligence is
                 transforming every industry, yet most organisations are sold hype instead
                 of a clear-eyed assessment of where it actually helps. Founded by Rishabh
-                Agarwal — an engineer, IIM Calcutta alumnus, and author of four books with
-                20 years in supply chain and strategy — FaxLab AI set out to close the gap
+                Agarwal - an engineer, IIM Calcutta alumnus, and author of four books with
+                20 years in supply chain and strategy FaxLab AI set out to close the gap
                 between AI's promise and everyday practice.
               </p>
               <p>
                 Today FaxLab AI works across three fronts: hands-on courses for individual
                 learners, structured training and workshops for corporates and universities,
                 and vendor-neutral consulting for organisations deciding where AI is genuinely
-                worth the investment — and where it isn't.
+                worth the investment and where it isn't.
               </p>
               <p>
                 Rooted in Vadodara and built for Indian scale with global standards, every
-                engagement — whether it's a self-paced course or an enterprise pilot — starts
+                engagement, whether it's a self-paced course or an enterprise pilot, starts
                 with the same promise: honest advice, practical skills, and capability that
                 stays with you long after we leave.
               </p>
               <div className="space-y-3 pt-2">
                 {[
                   "Practitioner-led curriculum, not recycled slideware",
-                  "No referral fees — only recommendations that work for you",
+                  "No referral fees, only recommendations that work for you",
                   "Every engagement starts with a measurable definition of success",
                 ].map((line) => (
                   <div key={line} className="flex items-start gap-3">
