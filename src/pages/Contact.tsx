@@ -103,7 +103,7 @@ const Contact = () => {
             </h1>
             <p className="text-lg text-muted-foreground">
               Whether it's a workshop, an AI roadmap, an investment conversation, a
-              training program for your team, or a course question — write to us and
+              training program for your team, or a course question, write to us and
               we'll respond within two working days.
             </p>
           </motion.div>
